@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int a[] = {1,2,3,5,6};
+       // Arrays.sort(a);
+        int value = 2;
+        Solution s= new Solution();
+        int ai=s.chop(value,a);
+        System.out.println(ai);
+    }
+    int chop(int value, int a []){
+        int low=0;
+        int high= a.length-1;
+        while(low<=high){
+            int mid = (low+high)/2;
+             System.out.println(a[mid]);
+            if (a[mid]==value){
+                return mid;
+            }
+            else if (a[mid]>value){
+                high=mid-1;
+            }
+            else{
+                low=mid+1;
+            }
+        }
+        return -1;
+    }
+}
