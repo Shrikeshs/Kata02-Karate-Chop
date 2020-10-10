@@ -1,0 +1,13 @@
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int a[] = {1,2,3,5,6};
+       
+        int value = 2;
+        int index = Collections.binarySearch(a,3);
+        System.out.println(index);
+    }
+}
